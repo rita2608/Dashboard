@@ -14,7 +14,7 @@ const TotalSalesChart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/total-sales');
+        const response = await axios.get('https://dashboard-api-three.vercel.app/api/total-sales');
         const chartData = response.data;
 
         setData({
