@@ -6,7 +6,7 @@ const cors = require('cors');
 // const app = express();
 const app = express();
 
-app.use(cors({ origin: 'http://localhost:3001' }));
+app.use(cors({ origin: 'https://dashboard-api-three.vercel.app/' }));
 
 const port = process.env.PORT || 3000;
 
