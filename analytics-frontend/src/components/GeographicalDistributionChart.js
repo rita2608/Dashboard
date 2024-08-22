@@ -14,7 +14,7 @@ const GeographicalDistributionChart = () => {
   useEffect(() => {
     const fetchData = async()=>{
       try {
-        const response = await axios.get('http://localhost:3000/api/customer-distribution');
+        const response = await axios.get('https://dashboard-api-three.vercel.app/api/customer-distribution');
         const chartData= response.data;
         setData({
           labels: chartData.map(d => d._id),
