@@ -14,7 +14,7 @@ const NewCustomersChart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/new-customers');
+        const response = await axios.get('https://dashboard-api-three.vercel.app/api/new-customers');
         const chartData = response.data;
 
         if (chartData.length > 0) {
