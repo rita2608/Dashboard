@@ -4,10 +4,8 @@ require('dotenv').config();
 
 const app = express();
 
-const MONGODB_URI= "mongodb+srv://db_user_read:LdmrVA5EDEv4z3Wr@cluster0.n10ox.mongodb.net/RQ_Analytics?retryWrites=true&w=majority";
-
 // Connect to MongoDB
-mongoose.connect(MONGODB_URI, {
+mongoose.connect(process.env.MONGODB_URI,, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
@@ -17,7 +15,7 @@ mongoose.connect(MONGODB_URI, {
 app.use(express.json());
 
 // Import routes
-const analyticsRoutes = require('./routes');
+const analyticsRoutes = require('./routes/analytics');
 app.use('/', analyticsRoutes);
 
 // Export the Express app as a module for Vercel
