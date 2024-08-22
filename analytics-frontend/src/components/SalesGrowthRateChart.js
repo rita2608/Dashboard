@@ -14,7 +14,7 @@ const SalesGrowthRateChart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/sales-growth');
+        const response = await axios.get('https://dashboard-api-three.vercel.app/api/sales-growth');
         const chartData = response.data[0];
 
         if (chartData && chartData.dates.length > 0) {
