@@ -18,7 +18,7 @@ app.use(express.json());
 
 // Import routes
 const analyticsRoutes = require('./routes');
-app.use('/api', analyticsRoutes);
+app.use('', analyticsRoutes);
 
 // Export the Express app as a module for Vercel
 module.exports = app;
