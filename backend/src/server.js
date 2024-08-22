@@ -6,7 +6,7 @@ const cors = require('cors');
 // const app = express();
 const app = express();
 
-app.use(cors({ origin: 'https://dashboard-cyan-gamma-27.vercel.app/' }));
+app.use(cors({ origin: 'https://dashboard-cyan-gamma-27.vercel.app' }));
 
 const port = process.env.PORT || 3000;
 
