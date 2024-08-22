@@ -15,7 +15,7 @@ mongoose.connect('mongodb+srv://db_user_read:LdmrVA5EDEv4z3Wr@cluster0.n10ox.mon
 app.use(express.json());
 
 // Import routes
-const analyticsRoutes = require('./routes/analytics');
+const analyticsRoutes = require('./routes');
 app.use('/api', analyticsRoutes);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
