@@ -9,7 +9,7 @@ const CustomerLifetimeValueChart = () => {
   const [data, setData] = useState({ labels: [], datasets: [] });
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/customer-lifetime-value')
+    axios.get('https://dashboard-api-three.vercel.app/api/customer-lifetime-value')
       .then(response => {
         const chartData = response.data;
             console.log('Chart data:', chartData);
